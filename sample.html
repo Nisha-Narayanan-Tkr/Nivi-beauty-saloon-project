@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beauty Salon</title>
+  <!-- Import Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: #fff; }
+
+    nav {
+      position: fixed; top: 0; left: 0; width: 100%;
+      background: rgba(34,34,34,0.9); color: #fff;
+      display: flex; justify-content: center; gap: 40px;
+      padding: 15px 0; z-index: 1000;
+    }
+    nav a { color: #fff; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+    nav a:hover { color: #ff69b4; }
+
+    header { height: 100vh; background: url('https://wallpapercave.com/wp/wp7885188.jpg') center/cover no-repeat; 
+             display: flex; justify-content: center; align-items: center; color: white; }
+    h1 { font-size: 3em; animation: fadeIn 3s ease-in-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section { padding: 80px 20px; text-align: center; }
+
+    /* Gallery with captions */
+    .gallery { display: flex; justify-content: center; gap: 20px; padding: 40px; }
+    .gallery-item {
+      width: 250px; height: 300px; 
+      display: flex; flex-direction: column; align-items: center;
+      border-radius: 10px; overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.5s;
+      background: #fff;
+    }
+    .gallery-item img {
+      width: 100%; height: 250px; object-fit: cover;
+    }
+    .gallery-item p {
+      margin: 10px 0; font-weight: 600;
+    }
+    .gallery-item:hover { transform: scale(1.05); }
+
+    footer { background: #222; color: #fff; text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services / Products</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <!-- Home Section -->
+  <header id="home">
+    <h1>Welcome to Nivi's Beauty Salon</h1>
+  </header>
+
+  <!-- About Us Section -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>At Nivi's Beauty Salon, we bring elegance, style, and relaxation together. Our team of professionals ensures you look and feel your best.</p>
+    <h4>Shall we do a makeover?????</h4>
+</section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.FhcUddktemablJMkLOLcpAHaHa?r=0&pid=Api&h=220&P=0" alt="Nail Art">
+        <p>💅 Nail</p>
+            </div>
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/originals/11/51/98/115198d4baa6d0318258e89bbb7ee8fa.jpg" alt="Hair Styling">
+        <p>💇 Hair Styling</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://img.grouponcdn.com/sparta/PJ62GE3ZagXBY3zrXNVZuz/3W-1536x1024.jpg" alt="Spa Therapy">
+        <p>💆 Spa Therapy</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email:Nivi'sBeauty@salon.com</p>
+    <p>Phone: +91 98765 41111</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Nivi's Beauty Salon. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scroll effect
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))
+          .scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
